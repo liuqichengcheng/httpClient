@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    # 数据源名称，任意
+    name: mysql
+    url: jdbc:mysql://localhost:3306/xiaoan?ullNamePatternMatchesAll=true&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    # 数据库连接用户
+    username: root
+    # 数据库连接密码
+    password: root
+    # 驱动
+    driver-class-name: com.mysql.jdbc.Driver
+
+    # 整合mail
+  mail:
+    # smtp 服务地址
+    host: smtp.qq.com
+    # 发送方的邮箱
+    username: 2460382560@qq.com
+    # 设置密码，该处的密码是发送方QQ邮箱开启SMTP的授权码而非QQ密码
+    password: alfohxbaegztdjag
+
+  jpa:
+    #配置自动建表：update:没有表新建，有表更新操作
+    show-sql: true
+    hibernate:
+      #控制台显示建表语句
+      ddl-auto: update
