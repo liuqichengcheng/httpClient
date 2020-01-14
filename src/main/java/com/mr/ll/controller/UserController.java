@@ -47,5 +47,6 @@ public class UserController{
     public List<UserEntity> findByNameLikeOrSex(@RequestBody UserEntity entity){
         Example<UserEntity> example = Example.of(entity);//用Example查询，会忽略null值
         return service.findByNameLikeOrSex("%" +  example.getProbe().getName() + "%",  example.getProbe().getSex());
+
     }
 }
